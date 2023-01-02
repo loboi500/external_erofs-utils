@@ -1,15 +1,3 @@
-# SPDX-License-Identifier: GPL-2.0+
-# Makefile.am
-
-noinst_LTLIBRARIES = liberofs.la
-liberofs_la_SOURCES = config.c io.c cache.c super.c inode.c xattr.c exclude.c \
-		      namei.c data.c compress.c compressor.c zmap.c decompress.c
-liberofs_la_CFLAGS = -Wall -Werror -I$(top_srcdir)/include
-if ENABLE_LZ4
-liberofs_la_CFLAGS += ${LZ4_CFLAGS}
-liberofs_la_SOURCES += compressor_lz4.c
-if ENABLE_LZ4HC
-liberofs_la_SOURCES += compressor_lz4hc.c
-endif
-endif
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:c63116a89403c740204821c552c8cc7296ca67426f89298cd9be7495fcf84a0b
+size 451
